@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerDash
+  - Item-Readable
+  - Item-Collectible
+  - Item-Listenable
   layers:
   - Default
   - TransparentFX
@@ -12,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Items
+  - BlocksVision
+  - BulletLevelObjects
   - 
   - 
   - 
@@ -41,4 +44,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 737252727
+    locked: 0
+  - name: Walls
+    uniqueID: 836321529
+    locked: 0
+  - name: LargeDetails
+    uniqueID: 2056458855
+    locked: 0
+  - name: Items
+    uniqueID: 638404213
+    locked: 0
+  - name: PlayerDash
+    uniqueID: 2213421885
+    locked: 0
+  - name: Enemy
+    uniqueID: 2241773229
+    locked: 0
+  - name: Player
+    uniqueID: 1460644151
+    locked: 0
+  - name: Shadow
+    uniqueID: 1095733707
     locked: 0
