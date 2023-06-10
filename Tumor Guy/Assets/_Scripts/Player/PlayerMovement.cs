@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private Rigidbody2D rigidbody;
     [SerializeField] private float movementSpeed = 5;
     private Vector2 moveDirection;
-
+    [Space]
+    [Header("Dash")]
+    [SerializeField] private float dashSpeed = 10;
+    [SerializeField] private float dashDuration = 1;
+    [SerializeField] private float dashCoolDown = 0.7f;
+    private bool isDashing = false;
+    private bool canDash = true;
+    [SerializeField] private GameObject playerBody;
+    [SerializeField] private string playerDashTag;
     [Space]
     [Header("Rotation")]
     [SerializeField] private float rotationSpeed = 15;
@@ -26,13 +35,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDashing) return;
         Move();
         RotateTowardsMouse();
     }
 
     private void GetInputs()
     {
+        if (isDashing)
+            return;
+
         moveDirection = GetMovementInputs();
+
+        if(canDash && Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(nameof(Dash));
+        }
+
         rotation = GetRotationInput();
     }
     private Vector2 GetMovementInputs()
@@ -58,8 +77,18 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed * Time.fixedDeltaTime);
     }
 
-    private void Dash()
+    private IEnumerator Dash()
     {
-
+        canDash = false;
+        isDashing = true;
+        playerBody.tag = playerDashTag; // To not take damage from bullets
+        rigidbody.velocity = transform.up * dashSpeed;
+        //rigidbody.AddForce(new Vector2(transform.up.x * dashSpeed, transform.up.y * dashSpeed));
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        playerBody.tag = "Player";
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash = true;
     }
+
 }
