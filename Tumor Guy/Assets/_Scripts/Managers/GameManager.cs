@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentScene;
     [field: Space]
     [field: Header("Player")]
+    public int KnockOutAmount { get; private set; } = 0;
     public List<Key> FoundKeys { get; private set; }
     
 

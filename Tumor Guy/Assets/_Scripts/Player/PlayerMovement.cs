@@ -24,6 +24,18 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion rotation;
     private const float ROTATION_OFFSET = -90;
 
+    private PlayerStats stats;
+
+    private void OnEnable()
+    {
+        stats = new PlayerStats();
+        //SetStats();
+
+    }
+    private void OnDisable()
+    {
+        
+    }
 
     private void Update()
     {
@@ -91,4 +103,10 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
+    private void SetStats()
+    {
+        float[] currentStats = stats.GetStats(GameManager.Instance.KnockOutAmount);
+
+
+    }
 }
