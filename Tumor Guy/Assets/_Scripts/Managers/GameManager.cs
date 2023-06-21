@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     [field: Space]
     [field: Header("Player")]
     public int KnockOutAmount { get; private set; } = 0;
-    public List<Key> FoundKeys { get; private set; }
+    public List<KeyIDs> FoundKeys { get; private set; }
+
     
 
 
@@ -34,6 +35,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void GoToLevel(int levelIndex)
+    {
+        SceneManager.LoadScene(levelIndex);
+    }
 
     public void PauseToggle()
     {
