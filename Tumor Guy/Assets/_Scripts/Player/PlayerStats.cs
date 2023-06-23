@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// find how to serialize class
+[System.Serializable]
 public class PlayerStats
 {
     private const int PLAYER_LIVES = 5;
