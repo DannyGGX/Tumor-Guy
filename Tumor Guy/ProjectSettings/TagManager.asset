@@ -8,6 +8,9 @@ TagManager:
   - Item-Readable
   - Item-Collectible
   - Item-Listenable
+  - Bullet
+  - Enemy
+  - Door
   layers:
   - Default
   - TransparentFX

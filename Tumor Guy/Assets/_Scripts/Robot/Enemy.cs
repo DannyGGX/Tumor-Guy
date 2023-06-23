@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [field: SerializeField] public float CurrentHealth = 100;
     [SerializeField] private GameObject DestroyedRobot;
-    [field: SerializeField] public Transform ShootPosition; // Also for vision
+    [field: SerializeField] public Transform FirePoint; // Also for vision
     [field: SerializeField] public int BulletsPerBurst = 3;
     [field: SerializeField] public float BurstFireRate = 0.2f; // time between bullets fired in a burst
     [field: SerializeField] public float TimeBetweenBursts = 0.8f;
@@ -50,6 +50,14 @@ public class Enemy : MonoBehaviour
             yield return fireWait;
         }
 
+    }
+
+    private void FireBullet()
+    {
+        GameObject bullet = BulletPool.Instance.GetBulletFromPool();
+        bullet.transform.position = FirePoint.position;
+        bullet.transform.rotation = FirePoint.rotation;
+        bullet.SetActive(true);
     }
 
     public void TakeDamage(float damage)
