@@ -7,8 +7,7 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-
-    [field: SerializeField] public Sound[] sounds { get; set; }
+    [field: SerializeField] public Sound[] Sounds { get; set; }
 
     void Awake()
     {
@@ -27,19 +26,19 @@ public class AudioManager : MonoBehaviour
 
     private void InitialiseSounds()
     {
-        foreach(Sound sound in sounds)
+        foreach(Sound sound in Sounds)
         {
             sound.audioSource = gameObject.AddComponent<AudioSource>();
-            sound.audioSource.clip = sound.clip;
-            sound.audioSource.volume = sound.volume;
-            sound.audioSource.pitch = sound.pitch;
-            sound.audioSource.loop = sound.loop;
+            sound.audioSource.clip = sound.Clip;
+            sound.audioSource.volume = sound.Volume;
+            sound.audioSource.pitch = sound.Pitch;
+            sound.audioSource.loop = sound.Loop;
         }
     }
 
     public void PlaySound(SoundNames name)
     {
-        Sound sound = Array.Find(sounds, s => s.name == name);
+        Sound sound = Array.Find(Sounds, s => s.Name == name);
         if (sound == null)
         {
             Debug.LogWarning($"Sound: {name} not found!");

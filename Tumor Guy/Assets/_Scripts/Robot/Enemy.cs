@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     [field: SerializeField] public LayerMask bulletLayer;
     public bool PlayerInSight = false;
 
+    private Coroutine BurstFireRoutine = null;
     void Start()
     {
         
@@ -38,18 +39,23 @@ public class Enemy : MonoBehaviour
     }
     public virtual void Attack()
     {
-
+        if (BurstFireRoutine == null)
+        {
+            BurstFireRoutine = StartCoroutine(nameof(BurstFire));
+        }
     }
     public IEnumerator BurstFire()
     {
         WaitForSeconds fireWait = new WaitForSeconds(BurstFireRate);
 
-        for (int i = 0; i < BulletsPerBurst; i++)
+        for (int i = 0; i < BulletsPerBurst - 1; i++)
         {
-            // shoot
+            FireBullet();
             yield return fireWait;
         }
-
+        FireBullet();
+        yield return new WaitForSeconds(TimeBetweenBursts);
+        //BurstFireRoutine = null;
     }
 
     private void FireBullet()
@@ -71,8 +77,8 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        Destroy(this);
-        Instantiate(DestroyedRobot, transform.position, Quaternion.AngleAxis(0, Vector3.up));
+        Destroy(gameObject);
+        //Instantiate(DestroyedRobot, transform.position, Quaternion.identity);
     }
 
     

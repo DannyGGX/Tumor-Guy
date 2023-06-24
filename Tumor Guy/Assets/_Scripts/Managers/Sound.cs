@@ -6,17 +6,17 @@ using UnityEngine.Audio;
 [System.Serializable]
 public class Sound
 {
-    public SoundNames name;
+    public SoundNames Name;
 
-    public AudioClip clip;
+    public AudioClip Clip;
 
     [Range(0f, 1f)]
-    public float volume = 1;
+    public float Volume = 1;
 
     [Range (0.3f, 3f)]
-    public float pitch = 1;
+    public float Pitch = 1;
 
-    public bool loop = false;
+    public bool Loop = false;
 
     [Range (0f, 1f)]
     public float SpatialBlend = 0.8f;

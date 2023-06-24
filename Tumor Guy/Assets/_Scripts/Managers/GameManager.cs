@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Scene Management")]
     [SerializeField] private int currentScene;
+    [SerializeField] private int level1SceneIndex;
     [field: Space]
     [field: Header("Player")]
     public int KnockOutAmount { get; private set; } = 0;
@@ -32,12 +33,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+    }
+    private void Start()
+    {
+        StartLevel1();
         
     }
 
     public void GoToLevel(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
+    }
+
+    public void StartLevel1()
+    {
+        AudioManager.Instance.PlaySound(SoundNames.Ambience);
     }
 
     public void PauseToggle()
