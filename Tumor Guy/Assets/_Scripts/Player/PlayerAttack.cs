@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            velocityMagnitude = rigidbody.velocity.magnitude;
+            velocityMagnitude = collision.relativeVelocity.magnitude;
             Debug.Log($"Tumor velocity: {velocityMagnitude}");
             if(velocityMagnitude < minVelocity)
                 return;
@@ -32,6 +32,7 @@ public class PlayerAttack : MonoBehaviour
     {
         float mappedDamage = Mathf.Lerp(BASE_MIN_DAMAGE, BASE_MAX_DAMAGE, Mathf.InverseLerp(minVelocity, maxVelocity, velocityMagnitude));
         mappedDamage *= damageMultiplier;
+        Debug.Log("Damage: " + mappedDamage);
         return mappedDamage;
     }
 }

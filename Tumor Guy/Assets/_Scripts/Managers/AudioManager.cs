@@ -46,4 +46,9 @@ public class AudioManager : MonoBehaviour
         }
         sound.audioSource?.Play();
     }
+
+    public void PlaySound(SoundNames name, Vector3 position)
+    {
+
+    }
 }
