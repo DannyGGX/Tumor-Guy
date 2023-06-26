@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2255290962119939432}
   - component: {fileID: 2255290962119939433}
   m_Layer: 0
-  m_Name: Shadow
+  m_Name: Shadow (Trigger)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
