@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int KnockOutAmount { get; private set; } = 0;
     public List<KeyIDs> FoundKeys { get; private set; }
 
+    public bool InspectionScreenActive = false;
     
 
 
@@ -41,6 +42,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void CloseInspectionScreen()
+    {
+        InspectionScreen.Instance.CloseInspectionScreen();
+    }
     public void GoToLevel(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
@@ -49,6 +54,7 @@ public class GameManager : MonoBehaviour
     public void StartLevel1()
     {
         AudioManager.Instance.PlaySound(SoundNames.Ambience);
+        FoundKeys = new List<KeyIDs>();
     }
 
     public void PauseToggle()

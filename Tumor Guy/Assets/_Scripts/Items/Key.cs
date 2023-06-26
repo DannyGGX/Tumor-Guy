@@ -6,12 +6,25 @@ public class Key : Item
 {
     [field: SerializeField] public KeyIDs KeyID;
 
+    public override void ItemInteract()
+    {
+        base.ItemInteract();
+        if(KeyID == KeyIDs.Keycard)
+        {
+            // play keycard pickup sound
+        }
+        else
+        {
+            // play key pickup sound
+        }
+        GameManager.Instance.FoundKeys.Add(KeyID);
+        TooltipManager.Instance.HideTooltip();
+        Destroy(gameObject);
+    }
 }
 
 public enum KeyIDs
 {
-    Key1,
-    Key2,
-    MapKey,
-    KeyCard
+    SolitaryKey,
+    Keycard,
 }

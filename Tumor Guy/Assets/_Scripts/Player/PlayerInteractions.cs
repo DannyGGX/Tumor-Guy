@@ -9,9 +9,15 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            GameManager.Instance.PauseToggle();
+            if(GameManager.Instance.InspectionScreenActive)
+            {
+                GameManager.Instance.CloseInspectionScreen();
+            }
+            else
+            {
+                GameManager.Instance.PauseToggle();
+            }
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

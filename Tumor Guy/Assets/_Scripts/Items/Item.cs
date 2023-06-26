@@ -4,7 +4,26 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
-    [field: SerializeField] public AudioClip InteractionSound;
-    //[field: SerializeField] public Canvas InspectionImageCanvas;
-    //[field: SerializeField] public GameObject InspectionImage;
+    [SerializeField] private ItemIDs itemID;
+
+    private void OnMouseDown()
+    {
+        ItemInteract();
+    }
+
+    public virtual void ItemInteract()
+    {
+        InspectionScreen.Instance.ShowInspectionItem(itemID);
+    }
+}
+
+public enum ItemIDs
+{
+    ChildLetter,
+    TumorObservations,
+    RebellingNote,
+    MapNote,
+
+    SolitaryKey,
+    Keycard,
 }
