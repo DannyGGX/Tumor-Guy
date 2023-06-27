@@ -13,12 +13,19 @@ public class RobotNoTurret : Enemy
 
     void Update()
     {
-        
+        Vision();
+    }
+
+    private void FixedUpdate()
+    {
+        if (PlayerInSight)
+        {
+            Attack();
+        }
     }
 
     public override void Attack()
     {
         base.Attack();
-        StartCoroutine(nameof(BurstFire));
     }
 }

@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RobotWithTurret : Enemy
+public class RobotWithTurret : Enemy // Script goes on body
 {
-    [Space]
-    [SerializeField] private float rotationSpeed = 10f;
+    
 
 
 
     void Start()
     {
-        
+        Physics2D.queriesStartInColliders = false;
     }
 
     void Update()
