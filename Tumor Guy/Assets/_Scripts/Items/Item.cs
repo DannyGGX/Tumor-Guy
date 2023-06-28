@@ -26,4 +26,6 @@ public enum ItemIDs
 
     SolitaryKey,
     Keycard,
+
+    OfficeTapeRecorder,
 }

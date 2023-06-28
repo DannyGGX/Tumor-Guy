@@ -5,7 +5,15 @@ using UnityEngine;
 public class Paper : Item
 {
     [field: SerializeField] public PaperIDs PaperID;
+
+    public override void ItemInteract()
+    {
+        base.ItemInteract();
+        AudioManager.Instance.PlaySound(SoundNames.PickUpPaper);
+    }
 }
+
+
 
 public enum PaperIDs
 {

@@ -36,6 +36,31 @@ public enum SoundNames
     TumorExplode,
     HeavyBreathing,
 
+    LaserShot,
+    LaserImpact,
+    RobotDamaged,
+    RobotDestroy,
+    RobotTurretTurn,
+    RobotTurretHalt,
+
+    UnlockDoor,
+    OpenDoor,
+    WrongKey,
+
+    BeepPositive,
+    BeepNegative,
+    BlastDoorOpen,
+
+    PickUpPaper,
+    PickUpKey,
+    PickUpKeycard,
+
+    ButtonDraw,
+    ButtonClick,
+
+    Ambience,
+    MenuMusic,
+
     PlayerVoiceIntro,
     PlayerVoiceBodies,
     PlayerVoiceRobotEncounter,
@@ -45,13 +70,6 @@ public enum SoundNames
     PlayerVoiceLastWakeUp,
     PlayerVoiceFindScientist,
 
-    LaserShot,
-    LaserImpact,
-    RobotDamaged,
-
-    ButtonDraw,
-    ButtonClick,
-
-    Ambience,
-    MenuMusic,
+    ScientistVoiceTape,
+    ScientistVoiceEnd,
 }
