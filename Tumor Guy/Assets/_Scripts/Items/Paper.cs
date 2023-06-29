@@ -17,7 +17,8 @@ public class Paper : Item
 
 public enum PaperIDs
 {
-    ChildDrawing,
     ChildLetter,
+    Observations,
+    RebelNote,
     Map,
 }

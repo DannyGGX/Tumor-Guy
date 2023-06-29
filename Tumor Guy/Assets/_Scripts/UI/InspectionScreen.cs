@@ -41,13 +41,11 @@ public class InspectionScreen : MonoBehaviour
         currentInspectionItem = InspectionItems[index].ImageObject;
 
         ToggleVisibility(true);
-        GameManager.Instance.PauseToggle();
     }
 
     public void CloseInspectionScreen()
     {
         ToggleVisibility(false);
-        GameManager.Instance.PauseToggle();
     }
 
     private void ToggleVisibility(bool isVisable)
@@ -55,5 +53,6 @@ public class InspectionScreen : MonoBehaviour
         currentInspectionItem.SetActive(isVisable);
         exitButton.SetActive(isVisable);
         GameManager.Instance.InspectionScreenActive = isVisable;
+        GameManager.Instance.PauseToggle();
     }
 }

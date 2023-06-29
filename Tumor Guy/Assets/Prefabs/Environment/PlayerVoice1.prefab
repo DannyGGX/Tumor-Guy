@@ -72,3 +72,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLineName: 9
+  waitToPlay: 0.5

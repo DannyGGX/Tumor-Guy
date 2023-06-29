@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     }
     private void Start()
     {
-        //play shoot sound
+        
         //rb.velocity = transform.up * bulletSpeed;
     }
 
