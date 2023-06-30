@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
 
             Enemy enemyHit = collision.gameObject.GetComponent<Enemy>();
             enemyHit.TakeDamage(CalculateVelocityDamage());
-            AudioManager.Instance.PlaySound(SoundNames.RobotDamaged);
+            AudioManager.Instance.PlaySoundEffect(SoundNames.RobotDamaged);
         }
     }
 

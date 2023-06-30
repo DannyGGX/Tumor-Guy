@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4037511054388435086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4037511054388435080}
+  - component: {fileID: 4037511054388435081}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4037511054388435080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037511054388435086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4037511054388435081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037511054388435086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74187093279ef94597a54bd0267da4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ad78174907ca6d64088d9ce13cb26ee0, type: 2}
+  <VolumeSliderValue>k__BackingField: 0.8
+  <Sounds>k__BackingField:
+  - Name: 28
+    Clip: {fileID: 8300000, guid: 37f0e0d3a1c23c3498f0453f646fb5e1, type: 3}
+    Volume: 0.1
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 9
+    Clip: {fileID: 8300000, guid: ef04fdfbfe3ef9042b5918a4791c3c1d, type: 3}
+    Volume: 0.9
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 26
+    Clip: {fileID: 8300000, guid: 582aa84f0e6ff964db593c136fe62bef, type: 3}
+    Volume: 0.7
+    Pitch: 1
+    Loop: 1
+    SpatialBlend: 0
+    audioSource: {fileID: 0}
+  - Name: 11
+    Clip: {fileID: 8300000, guid: d848d90f1ea9c144a9f680bfa3898668, type: 3}
+    Volume: 0.4
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 21
+    Clip: {fileID: 8300000, guid: 51215f17cd25bb44ab4d1b53b1e97756, type: 3}
+    Volume: 0.7
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 22
+    Clip: {fileID: 8300000, guid: 6243af0f985b94a4795e5be925be6028, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 23
+    Clip: {fileID: 8300000, guid: 4c4a032c045a21349939fe2d6321fcac, type: 3}
+    Volume: 0.8
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 36
+    Clip: {fileID: 8300000, guid: 25847a2d68c6a85439e7ebd1e759fa39, type: 3}
+    Volume: 0.7
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 27
+    Clip: {fileID: 8300000, guid: 650f297877a396547979b09ea720feeb, type: 3}
+    Volume: 0.7
+    Pitch: 1
+    Loop: 1
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}

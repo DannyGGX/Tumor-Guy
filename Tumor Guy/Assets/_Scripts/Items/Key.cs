@@ -11,11 +11,11 @@ public class Key : Item
         base.ItemInteract();
         if(KeyID == KeyIDs.Keycard)
         {
-            AudioManager.Instance.PlaySound(SoundNames.PickUpKeycard);
+            AudioManager.Instance.PlaySoundEffect(SoundNames.PickUpKeycard);
         }
         else
         {
-            AudioManager.Instance.PlaySound(SoundNames.PickUpKey);
+            AudioManager.Instance.PlaySoundEffect(SoundNames.PickUpKey);
         }
         GameManager.Instance.FoundKeys.Add(KeyID);
         TooltipManager.Instance.HideTooltip();

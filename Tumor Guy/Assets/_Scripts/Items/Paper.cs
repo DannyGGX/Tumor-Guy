@@ -9,7 +9,7 @@ public class Paper : Item
     public override void ItemInteract()
     {
         base.ItemInteract();
-        AudioManager.Instance.PlaySound(SoundNames.PickUpPaper);
+        AudioManager.Instance.PlaySoundEffect(SoundNames.PickUpPaper);
     }
 }
 

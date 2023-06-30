@@ -13,9 +13,12 @@ public class GameManager : MonoBehaviour
 
     [Header("Scene Management")]
     [SerializeField] private int currentScene;
+    [SerializeField] private int MainMenuSceneIndex;
     [SerializeField] private int level1SceneIndex;
+    [SerializeField] private int level2SceneIndex;
     [field: Space]
     [field: Header("Player")]
+    [SerializeField] private Transform playerLocation;
     public int KnockOutAmount { get; private set; } = 0;
     public List<KeyIDs> FoundKeys { get; private set; }
 
@@ -38,7 +41,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        StartLevel1();
+        StartMainMenu();
         
     }
 
@@ -46,16 +49,44 @@ public class GameManager : MonoBehaviour
     {
         InspectionScreen.Instance.CloseInspectionScreen();
     }
+
+    public void KnockOut()
+    {
+
+    }
+
+    public void WakeUp()
+    {
+
+    }
+
     public void GoToLevel(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void StartMainMenu()
+    {
+        if(AudioManager.Instance.IsMenuMusicPlaying() == false)
+        {
+            AudioManager.Instance.PlayMusic(SoundNames.MenuMusic);
+        }
+        SceneManager.LoadScene(MainMenuSceneIndex);
+    }
+
+    public void StartGame()
+    {
+        AudioManager.Instance.StopSound(SoundNames.MenuMusic);
+        StartLevel1();
+    }
+
     public void StartLevel1()
     {
-        AudioManager.Instance.PlaySound(SoundNames.Ambience);
+        AudioManager.Instance.PlaySoundEffect(SoundNames.Ambience);
         FoundKeys = new List<KeyIDs>();
+        SceneManager.LoadScene(level1SceneIndex);
     }
+
 
     public void PauseToggle()
     {
@@ -63,6 +94,13 @@ public class GameManager : MonoBehaviour
             Unpause();
         else
             Pause();
+    }
+    public void SetPauseState(bool state)
+    {
+        if (state)
+            Pause();
+        else
+            Unpause();
     }
     private void Pause()
     {

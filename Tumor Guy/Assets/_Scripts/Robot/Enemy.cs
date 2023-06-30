@@ -123,7 +123,7 @@ public abstract class Enemy : MonoBehaviour
         bullet.transform.position = FirePoint.position;
         bullet.transform.rotation = FirePoint.rotation;
         bullet.SetActive(true);
-        AudioManager.Instance.PlaySound(SoundNames.LaserShot);
+        AudioManager.Instance.PlaySoundEffect(SoundNames.LaserShot);
     }
 
     public void TakeDamage(float damage)

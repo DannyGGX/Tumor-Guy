@@ -6,6 +6,6 @@ public class TapeRecorder : Item
 {
     public override void ItemInteract()
     {
-        AudioManager.Instance.PlaySound(SoundNames.ScientistVoiceTape);
+        AudioManager.Instance.PlaySoundEffect(SoundNames.ScientistVoiceTape);
     }
 }
