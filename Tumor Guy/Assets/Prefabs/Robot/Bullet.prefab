@@ -148,8 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 80
   bulletSpeed: 10
-  maxActiveDuration: 2.5
-  ShootSound: {fileID: 0}
+  maxActiveDuration: 2
   rb: {fileID: 3895620887280100051}
   bulletLevelObjects:
     serializedVersion: 2

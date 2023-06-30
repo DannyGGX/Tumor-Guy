@@ -7,7 +7,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float bulletDamage = 80;
     [SerializeField] private float bulletSpeed = 10;
     [SerializeField] private float maxActiveDuration = 2.5f;
-    [SerializeField] private AudioClip ShootSound;
     [Space]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private LayerMask bulletLevelObjects;
@@ -16,13 +15,13 @@ public class Bullet : MonoBehaviour
     {
         Invoke(nameof(Disable), maxActiveDuration);
     }
-    private void Start()
-    {
+    //private void Start()
+    //{
         
-        //rb.velocity = transform.up * bulletSpeed;
-    }
+    //    rb.velocity = transform.up * bulletSpeed;
+    //}
 
-    private void Update()
+    private void FixedUpdate()
     {
         rb.velocity = transform.up * bulletSpeed;
     }
