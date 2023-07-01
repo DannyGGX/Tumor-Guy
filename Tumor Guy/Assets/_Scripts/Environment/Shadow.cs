@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shadow : MonoBehaviour
 {
     [SerializeField] private string playerDashTag = "PlayerDash";
-    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer[] sprites;
     //[SerializeField] private Color startColor;
     [SerializeField] private float fadeDuration = 1;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,11 +24,17 @@ public class Shadow : MonoBehaviour
 
         while (time < duration)
         {
-            sprite.color = Color.Lerp(startColor, targetColor, time / duration);
+            foreach(var sprite in sprites)
+            {
+                sprite.color = Color.Lerp(startColor, targetColor, time / duration);
+            }
             time += Time.deltaTime;
             yield return null;
         }
-        sprite.color = targetColor;
+        foreach (var sprite in sprites)
+        {
+            sprite.color = targetColor;
+        }
         Destroy(gameObject);
     }
 }
