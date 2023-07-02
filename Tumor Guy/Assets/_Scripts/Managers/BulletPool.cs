@@ -15,11 +15,11 @@ public class BulletPool : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(this);
+            return;
         }
 
         pooledBullets = new List<GameObject>();

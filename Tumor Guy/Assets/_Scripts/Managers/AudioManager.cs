@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
 
     [SerializeField] private AudioMixer mixer;
+    [SerializeField] private AudioMixerGroup mixerGroup;
     private const string PARAMETER_NAME = "MasterVolume";
     [field: SerializeField, Range(0.0001f, 1f)] public float VolumeSliderValue { get; set; } = 0.8f;
     [field: SerializeField] public Sound[] Sounds { get; set; }
@@ -37,7 +38,7 @@ public class AudioManager : MonoBehaviour
             sound.audioSource.volume = sound.Volume;
             sound.audioSource.pitch = sound.Pitch;
             sound.audioSource.loop = sound.Loop;
-            sound.audioSource.outputAudioMixerGroup = mixer.outputAudioMixerGroup;
+            sound.audioSource.outputAudioMixerGroup = mixerGroup;
         }
     }
     private void InitialiseMixerVolume()

@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletDamage = 80;
     [SerializeField] private float bulletSpeed = 10;
-    [SerializeField] private float maxActiveDuration = 2.5f;
+    [SerializeField] private float maxActiveDuration = 2f;
     [Space]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private LayerMask bulletLevelObjects;
@@ -29,11 +29,19 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == bulletLevelObjects || collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("PlayerDash"))
         {
-            gameObject.SetActive(false);
+            return;
         }
+        //if (collision.gameObject.CompareTag("Player"))
+        //{
+
+        //}
         //if (collision.gameObject.CompareTag("Enemy"))
+        //{
+
+        //}
+        gameObject.SetActive(false);
     }
 
     private void Disable()
