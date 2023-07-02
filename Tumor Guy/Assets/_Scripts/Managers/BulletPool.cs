@@ -31,11 +31,6 @@ public class BulletPool : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
-
     public GameObject GetBulletFromPool()
     {
         for (int i = 0; i < pooledBullets.Count; i++)

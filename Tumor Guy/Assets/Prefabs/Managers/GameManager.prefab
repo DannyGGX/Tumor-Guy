@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8745650057782803699}
   - component: {fileID: 8745650057782803696}
-  - component: {fileID: 8745650057782803697}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -51,16 +50,3 @@ MonoBehaviour:
   level2SceneIndex: 2
   playerLocation: {fileID: 0}
   InspectionScreenActive: 0
---- !u!114 &8745650057782803697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8745650057782803702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b153b13298fe94c907c2b5b7de5687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3895620887280100050, guid: f10a674d08eb7614b8ca042525a5a8e9, type: 3}

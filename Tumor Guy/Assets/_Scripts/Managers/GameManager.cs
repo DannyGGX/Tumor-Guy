@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public int KnockOutAmount { get; private set; } = 0;
     public List<KeyIDs> FoundKeys { get; private set; }
 
-    public bool InspectionScreenActive = false;
+    [HideInInspector] public bool InspectionScreenActive = false;
     
 
 
