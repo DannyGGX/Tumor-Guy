@@ -2581,7 +2581,7 @@ MonoBehaviour:
   dashCoolDown: 0.4
   playerBody: {fileID: 61895349}
   playerDashTag: PlayerDash
-  rotationSpeed: 5
+  rotationSpeed: 10
   camera: {fileID: 519420031}
 --- !u!50 &708846780
 Rigidbody2D:
@@ -3653,7 +3653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalScale.x
-      value: 15.920294
+      value: 15.94895
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalScale.y
@@ -3661,7 +3661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6792002
+      value: -0.6936
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8132,7 +8132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalScale.x
-      value: 16.250172
+      value: 16.27942
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalScale.y
@@ -8140,7 +8140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.84450006
+      value: -0.8589
       objectReference: {fileID: 0}
     - target: {fileID: 2255290962119939430, guid: 62eb49b51138a934e94d039e83403e43, type: 3}
       propertyPath: m_LocalPosition.y

@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private Quaternion GetRotationInput()
     {
-        Vector2 direction = camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = camera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + ROTATION_OFFSET;
         return Quaternion.AngleAxis(angle, Vector3.forward);
     }
