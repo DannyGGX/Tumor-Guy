@@ -86,7 +86,6 @@ public class PlayerMovement : MonoBehaviour
     private void RotateTowardsMouse()
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.fixedDeltaTime);
-        //rigidbody.angularVelocity =  transform.rotation.z;
         //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed * Time.fixedDeltaTime);
     }
 

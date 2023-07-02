@@ -16,6 +16,11 @@ public class VolumeSlider : MonoBehaviour
         {
             SetAudioLevel(v);
         });
+
+        if (AudioManager.Instance != null)
+        {
+            slider.value = AudioManager.Instance.VolumeSliderValue;
+        }
     }
     private void OnDisable()
     {
