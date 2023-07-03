@@ -17,6 +17,6 @@ public class PlayVoiceLine : MonoBehaviour
     private void PlayAudio()
     {
         AudioManager.Instance.PlaySoundEffect(voiceLineName);
-        Destroy(gameObject);
+        Destroy(gameObject, 0.1f);
     }
 }

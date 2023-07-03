@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: ad78174907ca6d64088d9ce13cb26ee0, type: 2}
+  mixerGroup: {fileID: 24300002, guid: ad78174907ca6d64088d9ce13cb26ee0, type: 2}
   <VolumeSliderValue>k__BackingField: 0.8
   <Sounds>k__BackingField:
   - Name: 28
     Clip: {fileID: 8300000, guid: 37f0e0d3a1c23c3498f0453f646fb5e1, type: 3}
-    Volume: 0.1
+    Volume: 0.5
     Pitch: 1
     Loop: 0
     SpatialBlend: 0.8
@@ -70,7 +71,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - Name: 11
     Clip: {fileID: 8300000, guid: d848d90f1ea9c144a9f680bfa3898668, type: 3}
-    Volume: 0.4
+    Volume: 0.3
     Pitch: 1
     Loop: 0
     SpatialBlend: 0.8
@@ -108,5 +109,26 @@ MonoBehaviour:
     Volume: 0.7
     Pitch: 1
     Loop: 1
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 29
+    Clip: {fileID: 8300000, guid: a3207923e3d08e24ea4223602a0794c1, type: 3}
+    Volume: 0.591
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 30
+    Clip: {fileID: 8300000, guid: a382b90650e1b2642a44e681e107b329, type: 3}
+    Volume: 0.5
+    Pitch: 1
+    Loop: 0
+    SpatialBlend: 0.8
+    audioSource: {fileID: 0}
+  - Name: 16
+    Clip: {fileID: 8300000, guid: 84a4f3274497d9d468e750f681f9e476, type: 3}
+    Volume: 0.9
+    Pitch: 1
+    Loop: 0
     SpatialBlend: 0.8
     audioSource: {fileID: 0}

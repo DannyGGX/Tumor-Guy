@@ -5,11 +5,13 @@ using System;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    public static event Action OnPlayerDie;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            // Die
+            OnPlayerDie?.Invoke();
         }
     }
 
